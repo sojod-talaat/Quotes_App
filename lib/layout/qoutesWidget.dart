@@ -70,7 +70,7 @@ class _QuotewidgetState extends State<Quotewidget> {
               child: Column(
             children: [
               Container(
-                margin: EdgeInsets.only(left: 9, top: 9),
+                margin: EdgeInsets.only(left: 19, top: 19),
                 height: 100,
                 child: const Center(
                   child: Text(
@@ -78,7 +78,7 @@ class _QuotewidgetState extends State<Quotewidget> {
 
                     // widget.q.content![index],
                     '''May the God of hope fill you with all joy and peace as you trust in him,
-                ''',
+                    ''',
 
                     style: TextStyle(fontSize: 20),
                   ),

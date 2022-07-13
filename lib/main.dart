@@ -41,7 +41,19 @@ class _myAppState extends State<myApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: isDark ? ThemeData.dark() : ThemeData.light(),
+      theme: ThemeData(
+          iconTheme: const IconThemeData(color: Colors.red),
+          scaffoldBackgroundColor: Colors.white,
+          appBarTheme: const AppBarTheme(
+              backgroundColor: Colors.white24,
+              titleTextStyle: TextStyle(color: Colors.black))),
+      darkTheme: ThemeData(
+          iconTheme: const IconThemeData(color: Colors.white),
+          scaffoldBackgroundColor: Colors.black,
+          appBarTheme: const AppBarTheme(
+              backgroundColor: Colors.black,
+              titleTextStyle: TextStyle(color: Colors.white))),
+      themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
       routes: {
         'home': (context) => typesOfQuotes(changeTheme, isDark),
         'hopeQoute': (context) => hopeQuote(
@@ -58,7 +70,7 @@ class _myAppState extends State<myApp> {
             ),
       },
       debugShowCheckedModeBanner: false,
-      home: SplashUi(changeTheme, isDark),
+      home: SplashUi(),
     );
   }
 }

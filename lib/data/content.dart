@@ -9,27 +9,3 @@ class content {
     contentQoute = data['contentQoute'];
   }
 }
-
-// List<content> con1 = [
-//   content(false, false, [
-//     'sojos',
-//     'saja',
-//     'dd',
-//   ]),
-//   content(
-//       false,
-//       false,
-//       [
-//         'sojos',
-//         'saja',
-//         'dd',
-//       ]..toList()),
-//   content(
-//       false,
-//       false,
-//       [
-//         'sojos',
-//         'saja',
-//         'dd',
-//       ]..toList()),
-// ];

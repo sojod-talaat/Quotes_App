@@ -73,7 +73,9 @@ class _typesOfQuotesState extends State<typesOfQuotes> {
                 ListTile(
                   onTap: () {
                     setState(() {});
+
                     Navigator.of(context).pop();
+                    Navigator.of(context).pushNamed('hopeQoute');
                   },
                   leading: const Icon(Icons.perm_identity),
                   title: const Text('home'),
@@ -113,19 +115,18 @@ class _typesOfQuotesState extends State<typesOfQuotes> {
           ),
         ),
       ),
-      backgroundColor: Colors.white,
       appBar: AppBar(
         actions: [
-          IconButton(
-            onPressed: () {
-              widget.function;
+          Switch(
+            activeColor: Colors.grey,
+            value: widget.isDark,
+            onChanged: (value) {
+              widget.function(value);
+              setState(() {});
             },
-            icon: Icon(Icons.light_mode_outlined),
-            color: Colors.black,
-          )
+          ),
         ],
         centerTitle: true,
-        backgroundColor: Colors.white,
         leading: Builder(
           builder: (context) => IconButton(
             icon: const Icon(
@@ -137,17 +138,15 @@ class _typesOfQuotesState extends State<typesOfQuotes> {
             },
           ),
         ),
-
         title: Text('Start your reading journey',
             style: GoogleFonts.dancingScript(
-                color: Colors.black,
+                // color: Colors.black,
                 fontWeight: FontWeight.bold,
                 fontSize: 25)),
-        // backgroundColor: Colors.white,
         elevation: 0.0,
       ),
       body: Container(
-          margin: EdgeInsets.only(top: 30),
+          margin: EdgeInsets.only(top: 40),
           height: 900,
           child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

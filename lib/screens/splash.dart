@@ -3,9 +3,6 @@ import 'package:project1/layout/typeQuoteUi.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashUi extends StatefulWidget {
-  Function fun;
-  bool isDark;
-  SplashUi(this.fun, this.isDark);
   @override
   State<SplashUi> createState() => _SplashUiState();
 }
@@ -18,7 +15,7 @@ class _SplashUiState extends State<SplashUi> {
         onTap: () {
           Navigator.of(context).pushReplacementNamed('home');
         },
-        child: Stack(
+        child: Column(
           children: [
             Expanded(
               child: Container(

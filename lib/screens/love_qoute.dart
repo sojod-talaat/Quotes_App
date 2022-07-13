@@ -51,12 +51,5 @@ class _LoveqouteState extends State<Loveqoute> {
                           widget.fun,
                           widget.fun2);
                     })));
-    //   return Quotewidget(
-    //       data
-    //           .where((element) => element.isLike)
-    //           .toList()[index],
-    //       widget.fun,
-    //       widget.fun2);
-    // })));
   }
 }
