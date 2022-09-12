@@ -26,7 +26,7 @@ class _SplashUiState extends State<SplashUi> {
                     bottomRight: Radius.circular(3),
                   ),
                   image: DecorationImage(
-                    image: AssetImage('images/splash.jpg'),
+                    image: AssetImage('assets/images/splash.jpg'),
                     fit: BoxFit.fill,
                   ),
                 ),
