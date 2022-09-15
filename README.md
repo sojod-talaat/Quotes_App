@@ -1,4 +1,4 @@
-# project1
+# QUOTES APP
 
 A new Flutter project.
 
